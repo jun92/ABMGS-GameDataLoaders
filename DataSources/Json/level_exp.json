@@ -1,0 +1,302 @@
+[
+  {
+    "level": 1,
+    "required_exp": 0,
+    "total_exp": 0,
+    "stat_growth_rate": 1,
+    "stamina_max": 100,
+    "is_milestone": false,
+    "title_unlock": "초보 모험가",
+    "level_up_rewards": { "gold": 100, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 2,
+    "required_exp": 100,
+    "total_exp": 100,
+    "stat_growth_rate": 1.05,
+    "stamina_max": 105,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 150, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 3,
+    "required_exp": 250,
+    "total_exp": 350,
+    "stat_growth_rate": 1.1,
+    "stamina_max": 110,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 200, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 4,
+    "required_exp": 450,
+    "total_exp": 800,
+    "stat_growth_rate": 1.15,
+    "stamina_max": 115,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 300, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 5,
+    "required_exp": 700,
+    "total_exp": 1500,
+    "stat_growth_rate": 1.25,
+    "stamina_max": 125,
+    "is_milestone": true,
+    "title_unlock": "숙련된 견습생",
+    "level_up_rewards": { "gold": 1000, "skill_points": 2, "items": [{ "item_id": 1001, "count": 1 }, { "item_id": 2001, "count": 5 }] }
+  },
+  {
+    "level": 6,
+    "required_exp": 1000,
+    "total_exp": 2500,
+    "stat_growth_rate": 1.3,
+    "stamina_max": 130,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 450, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 7,
+    "required_exp": 1400,
+    "total_exp": 3900,
+    "stat_growth_rate": 1.36,
+    "stamina_max": 135,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 550, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 8,
+    "required_exp": 1900,
+    "total_exp": 5800,
+    "stat_growth_rate": 1.42,
+    "stamina_max": 140,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 700, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 9,
+    "required_exp": 2500,
+    "total_exp": 8300,
+    "stat_growth_rate": 1.49,
+    "stamina_max": 145,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 850, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 10,
+    "required_exp": 3200,
+    "total_exp": 11500,
+    "stat_growth_rate": 1.6,
+    "stamina_max": 160,
+    "is_milestone": true,
+    "title_unlock": "정식 모험가",
+    "level_up_rewards": { "gold": 3000, "skill_points": 3, "items": [{ "item_id": 1004, "count": 1 }, { "item_id": 2002, "count": 10 }] }
+  },
+  {
+    "level": 11,
+    "required_exp": 4100,
+    "total_exp": 15600,
+    "stat_growth_rate": 1.68,
+    "stamina_max": 165,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 1100, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 12,
+    "required_exp": 5200,
+    "total_exp": 20800,
+    "stat_growth_rate": 1.76,
+    "stamina_max": 170,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 1300, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 13,
+    "required_exp": 6500,
+    "total_exp": 27300,
+    "stat_growth_rate": 1.85,
+    "stamina_max": 175,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 1500, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 14,
+    "required_exp": 8000,
+    "total_exp": 35300,
+    "stat_growth_rate": 1.94,
+    "stamina_max": 180,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 1800, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 15,
+    "required_exp": 10000,
+    "total_exp": 45300,
+    "stat_growth_rate": 2.1,
+    "stamina_max": 195,
+    "is_milestone": true,
+    "title_unlock": "베테랑 전사",
+    "level_up_rewards": { "gold": 7500, "skill_points": 3, "items": [{ "item_id": 1008, "count": 1 }, { "item_id": 2003, "count": 5 }] }
+  },
+  {
+    "level": 16,
+    "required_exp": 12500,
+    "total_exp": 57800,
+    "stat_growth_rate": 2.2,
+    "stamina_max": 200,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 2200, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 17,
+    "required_exp": 15500,
+    "total_exp": 73300,
+    "stat_growth_rate": 2.31,
+    "stamina_max": 205,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 2600, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 18,
+    "required_exp": 19000,
+    "total_exp": 92300,
+    "stat_growth_rate": 2.43,
+    "stamina_max": 210,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 3000, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 19,
+    "required_exp": 23500,
+    "total_exp": 115800,
+    "stat_growth_rate": 2.55,
+    "stamina_max": 215,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 3500, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 20,
+    "required_exp": 29000,
+    "total_exp": 144800,
+    "stat_growth_rate": 2.75,
+    "stamina_max": 235,
+    "is_milestone": true,
+    "title_unlock": "왕국의 수호자",
+    "level_up_rewards": { "gold": 15000, "skill_points": 5, "items": [{ "item_id": 1012, "count": 1 }, { "item_id": 3001, "count": 2 }] }
+  },
+  {
+    "level": 21,
+    "required_exp": 36000,
+    "total_exp": 180800,
+    "stat_growth_rate": 2.89,
+    "stamina_max": 240,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 4200, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 22,
+    "required_exp": 44500,
+    "total_exp": 225300,
+    "stat_growth_rate": 3.04,
+    "stamina_max": 245,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 4800, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 23,
+    "required_exp": 55000,
+    "total_exp": 280300,
+    "stat_growth_rate": 3.2,
+    "stamina_max": 250,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 5500, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 24,
+    "required_exp": 68000,
+    "total_exp": 348300,
+    "stat_growth_rate": 3.36,
+    "stamina_max": 255,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 6300, "skill_points": 1, "items": [] }
+  },
+  {
+    "level": 25,
+    "required_exp": 85000,
+    "total_exp": 433300,
+    "stat_growth_rate": 3.6,
+    "stamina_max": 275,
+    "is_milestone": true,
+    "title_unlock": "대륙의 영웅",
+    "level_up_rewards": { "gold": 35000, "skill_points": 5, "items": [{ "item_id": 1018, "count": 1 }, { "item_id": 3005, "count": 3 }] }
+  },
+  {
+    "level": 26,
+    "required_exp": 106000,
+    "total_exp": 539300,
+    "stat_growth_rate": 3.8,
+    "stamina_max": 280,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 7500, "skill_points": 2, "items": [] }
+  },
+  {
+    "level": 27,
+    "required_exp": 132000,
+    "total_exp": 671300,
+    "stat_growth_rate": 4.02,
+    "stamina_max": 285,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 8800, "skill_points": 2, "items": [] }
+  },
+  {
+    "level": 28,
+    "required_exp": 165000,
+    "total_exp": 836300,
+    "stat_growth_rate": 4.25,
+    "stamina_max": 290,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 10200, "skill_points": 2, "items": [] }
+  },
+  {
+    "level": 29,
+    "required_exp": 210000,
+    "total_exp": 1046300,
+    "stat_growth_rate": 4.5,
+    "stamina_max": 295,
+    "is_milestone": false,
+    "title_unlock": null,
+    "level_up_rewards": { "gold": 12000, "skill_points": 2, "items": [] }
+  },
+  {
+    "level": 30,
+    "required_exp": 270000,
+    "total_exp": 1316300,
+    "stat_growth_rate": 5.0,
+    "stamina_max": 320,
+    "is_milestone": true,
+    "title_unlock": "초월자",
+    "level_up_rewards": { "gold": 100000, "skill_points": 10, "items": [{ "item_id": 1025, "count": 1 }, { "item_id": 4001, "count": 1 }] }
+  }
+]
