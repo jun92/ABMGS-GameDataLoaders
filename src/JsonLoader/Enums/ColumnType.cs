@@ -1,3 +1,5 @@
+using System.Text.Json.Nodes;
+
 namespace JsonLoader.Enums;
 
 public enum ColumnType
@@ -10,4 +12,3 @@ public enum ColumnType
     Text,
     Json
 }
-
