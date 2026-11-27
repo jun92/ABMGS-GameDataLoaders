@@ -9,12 +9,12 @@ using JsonLoader.Enums;
 namespace JsonLoader;
 
 public sealed partial class PostgresTableLoader(
-    string connectionString,
+    NpgsqlDataSource dataSource,
     string schemaName = "game_data",
     RemovedColumnPolicy removedColumnPolicy = RemovedColumnPolicy.DropNotNull)
 {
     private const string SystemPkColumn = "__row_id";
-    private readonly string _connectionString = connectionString;
+    //private readonly string _connectionString = connectionString;
     private readonly string _schemaName = SanitizeIdentifier(schemaName);
     private readonly RemovedColumnPolicy _removedColumnPolicy = removedColumnPolicy;
 
@@ -36,8 +36,10 @@ public sealed partial class PostgresTableLoader(
         var columnList = columns.Values.ToList();
         var rowCount = columnList[0].Values.Count;
         
-        await using var conn = new NpgsqlConnection(_connectionString);
-        await conn.OpenAsync(ct);
+        //await using var conn = new NpgsqlConnection(_connectionString);
+        await using var conn = await dataSource.OpenConnectionAsync(ct);
+
+        //await conn.OpenAsync(ct);
         
         await using var tx = await conn.BeginTransactionAsync(ct);
         try

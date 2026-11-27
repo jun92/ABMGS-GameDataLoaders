@@ -1,3 +1,4 @@
+using JsonLoader.Enums;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -27,10 +28,13 @@ public sealed class JsonDataLoaderWorker(
             var jsonFiles = Directory.GetFiles(sourceDir, "*.json", SearchOption.TopDirectoryOnly);
             logger.LogInformation("Found {Count} JSON file(s) to process.", jsonFiles.Length);
 
-            await using var connection = await dataSource.OpenConnectionAsync(stoppingToken);
-            logger.LogInformation("Connected to PostgreSQL: {Host}:{Port}/{Database}",
-                connection.Host, connection.Port, connection.Database);
+            // await using var connection = await dataSource.OpenConnectionAsync(stoppingToken);
+            // logger.LogInformation("Connected to PostgreSQL: {Host}:{Port}/{Database}",
+            //     connection.Host, connection.Port, connection.Database);
 
+            var loader = new PostgresTableLoader(dataSource, "game_data", RemovedColumnPolicy.DropNotNull);
+            
+            
             foreach (var filePath in jsonFiles)
             {
                 stoppingToken.ThrowIfCancellationRequested();
@@ -39,9 +43,8 @@ public sealed class JsonDataLoaderWorker(
                 logger.LogInformation("Processing file '{FileName}' -> target table '{TableName}'",
                     Path.GetFileName(filePath), tableName);
 
-                // TODO: 1. JSON 파일 스키마 파싱 및 컬럼 타입 추론
-                // TODO: 2. CREATE TABLE IF NOT EXISTS 실행
-                // TODO: 3. JSON 데이터 레코드 적재 (INSERT / COPY)
+                var columns = JsonTableParser.ParseFile(filePath);
+                await loader.SyncAndLoadAsync(tableName, columns, stoppingToken);
             }
 
             logger.LogInformation("JSON Data Loader completed successfully.");

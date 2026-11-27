@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Globalization;
 using System.Text.Json;
 using JsonLoader.Enums;
@@ -27,6 +28,7 @@ public static class JsonTableParser
             foreach (var element in root.EnumerateArray())
             {
                 if(element.ValueKind != JsonValueKind.Object) throw new InvalidOperationException($"Not Json ojects at row number [{rowIndex}]");
+                ProcessRow(element, columns, overrides, rowIndex);
                 rowIndex++;
             }
         }
