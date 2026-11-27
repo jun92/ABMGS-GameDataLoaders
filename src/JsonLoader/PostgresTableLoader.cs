@@ -14,7 +14,6 @@ public sealed partial class PostgresTableLoader(
     RemovedColumnPolicy removedColumnPolicy = RemovedColumnPolicy.DropNotNull)
 {
     private const string SystemPkColumn = "__row_id";
-    //private readonly string _connectionString = connectionString;
     private readonly string _schemaName = SanitizeIdentifier(schemaName);
     private readonly RemovedColumnPolicy _removedColumnPolicy = removedColumnPolicy;
 
@@ -36,16 +35,12 @@ public sealed partial class PostgresTableLoader(
         var columnList = columns.Values.ToList();
         var rowCount = columnList[0].Values.Count;
         
-        //await using var conn = new NpgsqlConnection(_connectionString);
-        await using var conn = await dataSource.OpenConnectionAsync(ct);
-
-        //await conn.OpenAsync(ct);
-        
-        await using var tx = await conn.BeginTransactionAsync(ct);
+        await using NpgsqlConnection conn = await dataSource.OpenConnectionAsync(ct);
+        await using NpgsqlTransaction tx = await conn.BeginTransactionAsync(ct);
         try
         {
             await ExecuteNonQueryAsync(conn, tx, $"CREATE SCHEMA IF NOT EXISTS {Quote(_schemaName)};", ct);
-            var existingColumns = await GetExistingColumnsAsync(conn, tx, tableName, ct);
+            Dictionary<string, ExistingColumnInfo> existingColumns = await GetExistingColumnsAsync(conn, tx, tableName, ct);
             if (existingColumns.Count == 0)
             {
                 await CreateTableAsync(conn, tx, tableName, columnList, ct);

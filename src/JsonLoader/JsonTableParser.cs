@@ -56,7 +56,7 @@ public static class JsonTableParser
         if (!File.Exists(schemaFilePath)) return result;
 
         var jsonText = File.ReadAllText(schemaFilePath);
-        var rawMap = JsonSerializer.Deserialize<Dictionary<string, String>>(jsonText);
+        var rawMap = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonText);
         if (rawMap is null) return result;
 
         foreach (var (colName, typeName) in rawMap)

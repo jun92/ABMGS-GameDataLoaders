@@ -28,10 +28,6 @@ public sealed class JsonDataLoaderWorker(
             var jsonFiles = Directory.GetFiles(sourceDir, "*.json", SearchOption.TopDirectoryOnly);
             logger.LogInformation("Found {Count} JSON file(s) to process.", jsonFiles.Length);
 
-            // await using var connection = await dataSource.OpenConnectionAsync(stoppingToken);
-            // logger.LogInformation("Connected to PostgreSQL: {Host}:{Port}/{Database}",
-            //     connection.Host, connection.Port, connection.Database);
-
             var loader = new PostgresTableLoader(dataSource, "game_data", RemovedColumnPolicy.DropNotNull);
             
             
@@ -60,7 +56,6 @@ public sealed class JsonDataLoaderWorker(
         }
         finally
         {
-            // CLI 배치 작업 완료 후 Host가 정상 종료되도록 신호 전달
             appLifetime.StopApplication();
         }
     }
