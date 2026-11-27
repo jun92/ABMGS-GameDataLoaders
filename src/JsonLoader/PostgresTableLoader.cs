@@ -59,7 +59,7 @@ public sealed partial class PostgresTableLoader(
 
             if (rowCount > 0)
             {
-
+                await BulkInsertAsync(conn, tableName, columnList, rowCount, ct);
             }
 
             await tx.CommitAsync(ct);
